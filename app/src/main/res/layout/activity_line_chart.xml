@@ -4,33 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LineChartActivity">
 
-
-    <Button
-        android:id="@+id/barChart"
+    <TextView
+        android:id="@+id/tvChartData"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BarChart"
+        android:text="Tv chart DAta"
+        app:layout_constraintBottom_toTopOf="@+id/lineChartView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/doonutChart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DonutChart"
+    <com.db.williamchart.view.LineChartView
+        android:id="@+id/lineChartView"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:chart_axis="none"
+        app:chart_gridEffect="dotted"
+        app:chart_lineColor="#0050D8"
+        app:chart_lineThickness="3dp"
+        app:chart_smoothLine="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/barChart" />
-
-    <Button
-        android:id="@+id/lineChart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LineChart"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/doonutChart" />
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

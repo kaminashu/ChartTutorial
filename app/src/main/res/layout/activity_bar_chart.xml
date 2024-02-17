@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BarChartActivity">
+
+    <com.db.williamchart.view.BarChartView
+        android:id="@+id/verticalChartView"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        app:chart_axis="x"
+        app:chart_barsColor="#4D48DF"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.db.williamchart.view.HorizontalBarChartView
+        android:id="@+id/horizantalChart"
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        app:chart_axis="x"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/verticalChartView" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
